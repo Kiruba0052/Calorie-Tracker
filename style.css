@@ -1,0 +1,242 @@
+body {
+    background-color: #0b2035;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 75px 0;
+  }
+  
+  h1 {
+    font-size: 30px;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  
+  a {
+    color: #fc7904;
+    text-decoration: none;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 380px;
+    padding: 35px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06), 
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086), 
+                0 100px 80px rgba(0, 0, 0, 0.12);
+    border: none;
+  
+    .btns {
+      label {
+        display: none;
+      }
+      .btns-flex {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  
+    .input-section {
+      h3 {
+        display: flex;
+        align-items: center;
+      }
+      .info-box {
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 
+                    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                    0 12.5px 10px rgba(0, 0, 0, 0.06), 
+                    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                    0 41.8px 33.4px rgba(0, 0, 0, 0.086), 
+                    0 100px 80px rgba(0, 0, 0, 0.12);
+        background-color: #fff;
+        color: #000;
+        padding: 5px 10px;
+        position: absolute;
+        bottom: 105%;
+        left: 0;
+        z-index: 100;
+        width: 95%;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        p {
+          margin: 10px 0;
+          display: block;
+        }
+      }
+      .info-icon {
+        font-size: 26px;
+        margin-left: 10px;
+        cursor: help;
+      }
+      &:not(:first-child) {
+        margin-top: 25px;
+      }
+    }
+  
+    .inputs {
+      display: flex;
+      align-items: center;
+  
+      input {
+        padding: 10px 20px;
+        border-radius: 2px;
+        border: none;
+        font-family: "Montserrat", sans-serif;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+      label {
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .input-after-info {
+        margin-left: 10px;
+      }
+    }
+  
+    .inp-norm {
+      input {
+        width: 41%;
+      }
+      label {
+        width: 30%;
+      }
+      .input-after-info {
+        width: 10%;
+      }
+    }
+  
+    .inp-2-fields {
+      input {
+        width: 10%;
+      }
+      label {
+        width: 30%;
+      }
+      .input-after-info {
+        width: 8%;
+      }
+    }
+  
+    .radio-btns {
+      position: relative;
+      p {
+        margin: 2px 0;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  
+    .radio-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      position: relative;
+  
+      .radio-btn {
+        width: 48%;
+        label {
+          cursor: pointer;
+          padding: 5px 2px;
+        }
+      }
+    }
+  
+    input[type="radio"] {
+      visibility: hidden;
+      display: none;
+    }
+  
+    input[type="radio"] + label:before {
+      height: 20px;
+      width: 20px;
+      margin-right: 5px;
+      margin-bottom: -3px;
+      margin-top: 5px;
+      content: "";
+      color: #7dca5c;
+      display: inline-block;
+      vertical-align: baseline;
+      border: 1px solid #777;
+      background: #fff;
+      font-size: 25px;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+  
+    input[type="radio"]:checked + label:before {
+      background: #fc7904;
+    }
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border-radius: 2px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #fc7904;
+  }
+  
+  .btn-input {
+    @extend .btn;
+    width: 45%;
+    margin-top: 10px;
+  }
+  
+  .btn-active {
+    opacity: 1;
+    cursor: default;
+  }
+  
+  .btn-not-active {
+    opacity: 0.5;
+  }
+  
+  .btn-submit {
+    @extend .btn;
+    width: 100%;
+    margin-top: 25px;
+  }
+  
+  .result-box {
+    height: 100px;
+    width: 100%;
+    max-width: 380px;
+    margin-top: 20px;
+  
+    #resultNumber {
+      color: #fc7904;
+    }
+  
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+  
+  .author {
+    position: absolute;
+    left: 35px;
+    top: 35px;
+  }
+  
